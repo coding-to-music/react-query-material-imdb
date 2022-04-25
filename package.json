@@ -1,7 +1,14 @@
 {
-  "name": "react-query-movies-app",
+  "name": "react-query-material-imdb",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    ".next/cache"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -26,7 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "git add . && git commit -m Build && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "eslintConfig": {
     "extends": [
