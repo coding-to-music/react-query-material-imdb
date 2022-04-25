@@ -63,7 +63,6 @@ heroku create react-query-material-imdb
 ```java
 heroku config:set
 
-
 heroku config:set JWT_SECRET="secret"
 
 heroku config:set PUBLIC_URL="https://react-query-material-imdb.herokuapp.com"
