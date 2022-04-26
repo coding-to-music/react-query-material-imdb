@@ -19,7 +19,13 @@ https://github.com/RishikeshVedpathak/react-query-movies-app
 # Environment Values
 
 ```java
-None in this app, no use of process.env
+
+Need to change this to use process.env
+
+const CONSTANTS = {
+  BASE_URL: "https://www.omdbapi.com/",
+  API_USER_ID: "tt3896198",
+  API_KEY: "91300fc7",
 ```
 
 # React-Query-Movies-App
