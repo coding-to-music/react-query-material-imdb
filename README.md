@@ -4,11 +4,15 @@
 
 ### React / omdbapi.com API
 
+OMDb API
+
+The Open Movie Database
+
+The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.
+
 https://github.com/coding-to-music/react-query-material-imdb
 
 https://react-query-material-imdb.vercel.com
-
-https://react-query-material-imdb.herokuapp.com (Exceeds memory)
 
 by Rishikesh Vedpathak https://github.com/RishikeshVedpathak
 
@@ -17,6 +21,8 @@ https://react-query-movies-app.netlify.app
 https://github.com/RishikeshVedpathak/react-query-movies-app
 
 ## Runtime errors on Heroku (works fine on Vercel)
+
+https://react-query-material-imdb.herokuapp.com (Exceeds memory now stopped working)
 
 ```java
 2022-04-27T06:26:41.000000+00:00 app[api]: Build succeeded
