@@ -2,11 +2,13 @@
 
 # 🚀 Javascript full-stack 🚀
 
-### React / Next / MongoDB / eCharts / Storybook / GitHub API
+### React / omdbapi.com API
 
 https://github.com/coding-to-music/react-query-material-imdb
 
-https://react-query-material-imdb.vercel.com (works)
+https://react-query-material-imdb.vercel.com
+
+https://react-query-material-imdb.herokuapp.com (Exceeds memory)
 
 by Rishikesh Vedpathak https://github.com/RishikeshVedpathak
 
@@ -14,23 +16,18 @@ https://react-query-movies-app.netlify.app
 
 https://github.com/RishikeshVedpathak/react-query-movies-app
 
-## Build errors on Heroku (works fine on Vercel)
-
-https://react-query-material-imdb.herokuapp.com (does not work)
+## Runtime errors on Heroku (works fine on Vercel)
 
 ```java
-Failed to compile
-/app/src/components/AppHeader/index.tsx
-TypeScript error in /app/src/components/AppHeader/index.tsx(3,41):
-Could not find a declaration file for module 'react-router-dom'. '/app/node_modules/react-router-dom/index.js' implicitly has an 'any' type.
-  Try `npm i --save-dev @types/react-router-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-router-dom';`  TS7016
-
-    1 | import styles from "./index.module.css";
-    2 | import { ReactComponent as IMDBLogo } from "assets/images/IMDB_Logo.svg";
-  > 3 | import { useHistory, useLocation } from "react-router-dom";
-      |                                         ^
-    4 | import IconButton from "@material-ui/core/IconButton";
-    5 | import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
+2022-04-27T06:26:41.000000+00:00 app[api]: Build succeeded
+2022-04-27T06:27:14.273666+00:00 heroku[web.1]: Process running mem=524M(102.5%)
+2022-04-27T06:27:14.274910+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2022-04-27T06:27:24.654372+00:00 app[web.1]: Compiled successfully!
+2022-04-27T06:27:24.654881+00:00 app[web.1]:
+2022-04-27T06:27:24.654955+00:00 app[web.1]: You can now view react-query-material-imdb in the browser.
+2022-04-27T06:27:24.655122+00:00 app[web.1]:
+2022-04-27T06:27:24.655152+00:00 app[web.1]: Note that the development build is not optimized.
+2022-04-27T06:27:24.655208+00:00 app[web.1]: To create a production build, use npm run build.
 ```
 
 ```java
