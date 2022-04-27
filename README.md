@@ -6,9 +6,7 @@
 
 https://github.com/coding-to-music/react-query-material-imdb
 
-https://react-query-material-imdb.herokuapp.com
-
-https://react-query-material-imdb.vercel.com
+https://react-query-material-imdb.vercel.com (works)
 
 by Rishikesh Vedpathak https://github.com/RishikeshVedpathak
 
@@ -16,7 +14,35 @@ https://react-query-movies-app.netlify.app
 
 https://github.com/RishikeshVedpathak/react-query-movies-app
 
-# Environment Values
+## Build errors on Heroku (works fine on Vercel)
+
+https://react-query-material-imdb.herokuapp.com (does not work)
+
+```java
+Failed to compile
+/app/src/components/AppHeader/index.tsx
+TypeScript error in /app/src/components/AppHeader/index.tsx(3,41):
+Could not find a declaration file for module 'react-router-dom'. '/app/node_modules/react-router-dom/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react-router-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-router-dom';`  TS7016
+
+    1 | import styles from "./index.module.css";
+    2 | import { ReactComponent as IMDBLogo } from "assets/images/IMDB_Logo.svg";
+  > 3 | import { useHistory, useLocation } from "react-router-dom";
+      |                                         ^
+    4 | import IconButton from "@material-ui/core/IconButton";
+    5 | import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
+```
+
+```java
+2022-04-27T06:18:05.879018+00:00 heroku[web.1]: Process running mem=529M(103.5%)
+2022-04-27T06:18:05.881945+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2022-04-27T06:18:27.182679+00:00 heroku[web.1]: Process running mem=514M(100.4%)
+2022-04-27T06:18:27.184256+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+2022-04-27T06:18:47.830722+00:00 heroku[web.1]: Process running mem=514M(100.4%)
+2022-04-27T06:18:47.842276+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
+```
+
+## Environment Values
 
 ```java
 
@@ -24,8 +50,8 @@ Need to change this to use process.env
 
 const CONSTANTS = {
   BASE_URL: "https://www.omdbapi.com/",
-  API_USER_ID: "tt3896198",
-  API_KEY: "91300fc7",
+  API_USER_ID: process.env.API_USER_ID,
+  API_KEY: process.env.API_KEY,
 ```
 
 # React-Query-Movies-App
